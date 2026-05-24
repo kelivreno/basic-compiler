@@ -12,4 +12,6 @@ A compiler that runs basic operations that you would find in most programming la
 
 Process:
 
+```bash
 Source code -> [ LEXER ] - TOKENS -> [PARSER] - PROGRAM TREE -> [EMITTER] -> COMPILED CODE
+```
