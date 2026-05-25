@@ -9,14 +9,14 @@ class Lexer:
     def nextChar(self):
         self.curPos += 1
         if self.curPos >= len(self.source):
-            self.curChar = `\0` #EOF
+            self.curChar = '\0' #EOF
         else:
-            self.curChar = self.source(self.curPos)
+            self.curChar = self.source[self.curPos]
     # Return the lookahead character.
     def peek(self):
         if self.curPos + 1 >= len(self.source):
             return '\0'
-        return self.source(self.curPos + 1)
+        return self.source[self.curPos + 1]
     # Invalid token found, print error message
     def abort(self,message):
         pass
