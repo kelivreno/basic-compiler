@@ -15,3 +15,7 @@ Process:
 ```bash
 Source code -> [ LEXER ] - TOKENS -> [PARSER] - PROGRAM TREE -> [EMITTER] -> COMPILED CODE
 ```
+
+Update:
+
+Now I have updated the main.py by importing the lexer to the main.py
