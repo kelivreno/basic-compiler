@@ -31,4 +31,22 @@ class Lexer:
     
     # Return the next token
     def getToken(self):
-        pass
+        # Check the first character of this token to see if we can decide what it is.
+        # If it is a mulitple character operator (e.g., !=), number, identifier, or keyword the we will prcoess the rest of it.
+        if self.curChar == '+':
+            pass
+        elif self.curChar == '-':
+            pass
+        elif self.curChar == '*':
+            pass
+        elif self.curChar == '/':
+            pass
+        elif self.curChar == '\n':
+            pass
+        elif self.curChar == '\0':
+            pass
+        else:
+            # Uknown token!
+            pass
+
+        self.nextChar()
