@@ -1,6 +1,11 @@
+from lexer import *
+
 def main():
-    print("Hello from basic-compiler!")
+    source = "LET foobar = 123"
+    lexer = Lexer(source)
 
+    while lexer.peek() != '\0':
+        print(lexer.curChar)
+        lexer.nextChar()
 
-if __name__ == "__main__":
-    main()
+main()
