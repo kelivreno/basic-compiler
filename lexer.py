@@ -1,3 +1,6 @@
+import enum
+
+
 class Lexer:
     
     def __init__(self, source):
@@ -31,25 +34,27 @@ class Lexer:
     
     # Return the next token
     def getToken(self):
+        token = None
         # Check the first character of this token to see if we can decide what it is.
         # If it is a mulitple character operator (e.g., !=), number, identifier, or keyword the we will prcoess the rest of it.
         if self.curChar == '+':
-            pass
+            token = Token(self.curChar, TokenType.PLUS )
         elif self.curChar == '-':
-            pass
+            token = Token(self.curChar, TokenType.MINUS )
         elif self.curChar == '*':
-            pass
+            token = Token(self.curChar, TokenType.ASTERISK )
         elif self.curChar == '/':
-            pass
+            token = Token(self.curChar, TokenType.SLASH )
         elif self.curChar == '\n':
-            pass
+            token = Token(self.curChar, TokenType.NEWLINE)
         elif self.curChar == '\0':
-            pass
+            token = Token(self.curChar, TokenType.EOF)
         else:
             # Uknown token!
             pass
 
         self.nextChar()
+        return token
 
 class Token:
     def __init__(self, tokenText, tokenKind):
