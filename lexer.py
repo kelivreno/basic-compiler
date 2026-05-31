@@ -1,5 +1,5 @@
 import enum
-
+import sys
 
 class Lexer:
     
@@ -22,7 +22,7 @@ class Lexer:
         return self.source[self.curPos + 1]
     # Invalid token found, print error message
     def abort(self,message):
-        pass
+        sys.exit("Lexing error. " + message)
     # Skip whitespace except newlines
     # to indicate the end of a statement
     def skipWhitespace(self):
@@ -51,7 +51,7 @@ class Lexer:
             token = Token(self.curChar, TokenType.EOF)
         else:
             # Uknown token!
-            pass
+            self.abort("Unknown token: " + self.curChar)
 
         self.nextChar()
         return token
