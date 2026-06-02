@@ -1,21 +1,17 @@
 # A Tiny Compiler
 
-A compiler that runs basic operations that you would find in most programming languages:
+A simple compiler written in Python that supports basic programming language features:
+
 - Numerical variables
 - Basic arithmetic
 - If statements
 - While loops
 - Print text and numbers
-- Input Numbers
-- Labels and goto
-- Comment
+- User input
+- Labels and goto statements
+- Comments
 
-Process:
+## Compilation Process
 
 ```bash
-Source code -> [ LEXER ] - TOKENS -> [PARSER] - PROGRAM TREE -> [EMITTER] -> COMPILED CODE
-```
-
-Update:
-
-Now I have updated the main.py by importing the lexer to the main.py
+Source Code -> [LEXER] -> Tokens -> [PARSER] -> Program Tree -> [EMITTER] -> Compiled Code
